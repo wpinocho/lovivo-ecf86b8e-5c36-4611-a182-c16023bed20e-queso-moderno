@@ -30,6 +30,16 @@ const FeaturedProducts = () => {
     },
     {
       id: 3,
+      name: 'Queso Aventurero',
+      price: 32.00,
+      rating: 4.9,
+      reviews: 87,
+      image: '/lovable-uploads/4b8b1e5f-b8a9-4b6a-9c8d-2e5f3a1b7c9d.png',
+      badge: 'Aventura',
+      origin: 'México'
+    },
+    {
+      id: 4,
       name: 'Manchego Curado',
       price: 22.00,
       rating: 4.7,
@@ -39,7 +49,7 @@ const FeaturedProducts = () => {
       origin: 'España'
     },
     {
-      id: 4,
+      id: 5,
       name: 'Roquefort AOP',
       price: 26.75,
       rating: 4.6,
@@ -49,7 +59,7 @@ const FeaturedProducts = () => {
       origin: 'Francia'
     },
     {
-      id: 5,
+      id: 6,
       name: 'Gouda Añejo',
       price: 19.99,
       rating: 4.8,
@@ -59,7 +69,7 @@ const FeaturedProducts = () => {
       origin: 'Holanda'
     },
     {
-      id: 6,
+      id: 7,
       name: 'Camembert Normandía',
       price: 16.25,
       rating: 4.9,
@@ -85,7 +95,8 @@ const FeaturedProducts = () => {
       'Artesanal': 'bg-green-500',
       'Exclusivo': 'bg-blue-500',
       'Nuevo': 'bg-orange-500',
-      'Orgánico': 'bg-emerald-500'
+      'Orgánico': 'bg-emerald-500',
+      'Aventura': 'bg-amber-500'
     };
     return colors[badge as keyof typeof colors] || 'bg-gray-500';
   };
