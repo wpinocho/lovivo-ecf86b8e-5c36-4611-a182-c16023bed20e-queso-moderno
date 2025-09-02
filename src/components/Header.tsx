@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { ShoppingCart, Menu, X, Search, User } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -13,16 +14,16 @@ const Header = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex-shrink-0">
-            <h1 className="text-2xl font-bold text-amber-600">🧀 CheeseShop</h1>
+            <Link to="/" className="text-2xl font-bold text-amber-600">🧀 CheeseShop</Link>
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
-            <a href="#" className="text-gray-700 hover:text-amber-600 transition-colors">Inicio</a>
-            <a href="#" className="text-gray-700 hover:text-amber-600 transition-colors">Productos</a>
-            <a href="#" className="text-gray-700 hover:text-amber-600 transition-colors">Categorías</a>
-            <a href="#" className="text-gray-700 hover:text-amber-600 transition-colors">Sobre Nosotros</a>
-            <a href="#" className="text-gray-700 hover:text-amber-600 transition-colors">Contacto</a>
+            <Link to="/" className="text-gray-700 hover:text-amber-600 transition-colors">Inicio</Link>
+            <a href="#productos" className="text-gray-700 hover:text-amber-600 transition-colors">Productos</a>
+            <a href="#categorias" className="text-gray-700 hover:text-amber-600 transition-colors">Categorías</a>
+            <Link to="/sobre-nosotros" className="text-gray-700 hover:text-amber-600 transition-colors">Sobre Nosotros</Link>
+            <a href="#contacto" className="text-gray-700 hover:text-amber-600 transition-colors">Contacto</a>
           </nav>
 
           {/* Right side icons */}
@@ -56,11 +57,11 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 bg-white border-t">
-              <a href="#" className="block px-3 py-2 text-gray-700 hover:text-amber-600">Inicio</a>
-              <a href="#" className="block px-3 py-2 text-gray-700 hover:text-amber-600">Productos</a>
-              <a href="#" className="block px-3 py-2 text-gray-700 hover:text-amber-600">Categorías</a>
-              <a href="#" className="block px-3 py-2 text-gray-700 hover:text-amber-600">Sobre Nosotros</a>
-              <a href="#" className="block px-3 py-2 text-gray-700 hover:text-amber-600">Contacto</a>
+              <Link to="/" className="block px-3 py-2 text-gray-700 hover:text-amber-600" onClick={() => setIsMenuOpen(false)}>Inicio</Link>
+              <a href="#productos" className="block px-3 py-2 text-gray-700 hover:text-amber-600" onClick={() => setIsMenuOpen(false)}>Productos</a>
+              <a href="#categorias" className="block px-3 py-2 text-gray-700 hover:text-amber-600" onClick={() => setIsMenuOpen(false)}>Categorías</a>
+              <Link to="/sobre-nosotros" className="block px-3 py-2 text-gray-700 hover:text-amber-600" onClick={() => setIsMenuOpen(false)}>Sobre Nosotros</Link>
+              <a href="#contacto" className="block px-3 py-2 text-gray-700 hover:text-amber-600" onClick={() => setIsMenuOpen(false)}>Contacto</a>
             </div>
           </div>
         )}
