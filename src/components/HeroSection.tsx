@@ -22,12 +22,12 @@ const HeroSection = () => {
             <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 leading-tight">
               Los mejores
               <span className="text-amber-600"> quesos artesanales</span>
-              del mundo
+              de México
             </h1>
 
             <p className="text-xl text-gray-600 leading-relaxed">
               Descubre nuestra selección premium de quesos artesanales, 
-              cuidadosamente seleccionados de las mejores queserías europeas 
+              cuidadosamente seleccionados de las mejores queserías mexicanas 
               y locales para tu mesa.
             </p>
 
